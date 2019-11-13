@@ -1,21 +1,25 @@
-Use SQL queries, Excel Power Pivot, and/or Python to answer each question:
+## Lahman Baseball Database Exercise
+
+### Use SQL queries to find answers to the *Initial Questions*. You may use SQL, Excel Power Pivot, and/or Python to answer each of the *Open-Ended Questions*:
+
+
 
 **Initial Questions**
 
 1. What range of years does this database cover? 
 
-1. Find the name and height of the shortest player in the database. How many games did he play in? What is the name of the team for which this person played?
+1. Find the name and height of the shortest player in the database. How many games did he play in? What is the name of the team for which he played?
    
 
 1. Find all players in the database who played at Vanderbilt University. Create a list showing each player’s first and last names as well as the total salary they earned in the major leagues. Sort this list in descending order by the total salary earned. Which Vanderbilt player earned the most money in the majors?
 	
 
-2. Using the fielding table, group players into three groups based on their position: labels players with position OF as "Outfield", those with position "SS", "1B", "2B", and "3B" as "Infield", and those with position "P" or "C" as "Battery". Determine the number of putouts made be each of these three groups in 2016.
+2. Using the fielding table, group players into three groups based on their position: label players with position OF as "Outfield", those with position "SS", "1B", "2B", and "3B" as "Infield", and those with position "P" or "C" as "Battery". Determine the number of putouts made by each of these three groups in 2016.
    
 1. Find the number of strikeouts per game by decade since 1920. Round the numbers you report to 2 decimal places. Do the same for home runs per game. Do you see any trends?
    
 
-1. Find the player who had the most success stealing bases in 2016, where success is measured as the percentage of stolen base attempts which are successful. (A stolen base attempt results either in a stolen base or being caught stealing.) Consider only players who attempted at least 20 stolen bases.
+1. Find the player who had the most success stealing bases in 2016, where __success__ is measured as the percentage of stolen base attempts which are successful. (A stolen base attempt results either in a stolen base or being caught stealing.) Consider only players who attempted _at least_ 20 stolen bases.
 	
 
 1.  From 1970 – 2016, what is the largest number of wins for a team that did not win the world series? What is the smallest number of wins for a team that did win the world series? Doing this will probably result in an unusually small number of wins for a world series champion – determine why this is the case. Then redo your query, excluding the problem year. How often from 1970 – 2016 was it the case that a team with the most wins also won the world series? What percentage of the time?
