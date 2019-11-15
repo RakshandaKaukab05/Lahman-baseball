@@ -1,4 +1,6 @@
 ## Lahman Baseball Database Exercise
+- this data has been made available [online](http://www.seanlahman.com/baseball-archive/statistics/) by Sean Lahman
+- you can find a data dictionary [here](http://www.seanlahman.com/files/database/readme2016.txt)
 
 ### Use SQL queries to find answers to the *Initial Questions*. You may use SQL, Excel Power Pivot, and/or Python to answer each of the *Open-Ended Questions*:
 
