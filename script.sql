@@ -252,7 +252,7 @@ from people) as subquery;
 
 /*Are left-handed pitchers more likely to win the Cy Young Award*/
 
-select left_people_award,right_people_award from
+select left_people_award,right_people_award, Total_award, round(left_people_award/Total_award::numeric,2) * 100 as left_award_percent from
 (select count(playerid) as total_count,(select count(p.playerid) from people as p
 inner join awardsplayers as ap
 on p.playerid = ap.playerid
@@ -260,12 +260,15 @@ where p.throws = 'L' and ap.awardid = 'Cy Young Award') as left_people_award,
 (select count(p.playerid) from people as p
 inner join awardsplayers as ap
 on p.playerid = ap.playerid
-where p.throws = 'R' and ap.awardid = 'Cy Young Award') as right_people_award
+where p.throws = 'R' and ap.awardid = 'Cy Young Award') as right_people_award,
+(select count(p.playerid) from people as p
+inner join awardsplayers as ap
+on p.playerid = ap.playerid where ap.awardid = 'Cy Young Award') as Total_award
 from people ) as subquery
 
 /*Are they more likely to make it into the hall of fame?*/
 
-select left_people_fame,right_people_fame from
+select left_people_fame,right_people_fame,Players_fame, round(left_people_fame/Players_fame::numeric,2) * 100 as left_fame_percents from
 (select count(playerid) as total_count,(select count(p.playerid) from people as p
 inner join halloffame as hf
 on p.playerid = hf.playerid
@@ -273,7 +276,9 @@ where p.throws = 'L' and ballots >= 75) as left_people_fame,
 (select count(p.playerid) from people as p
 inner join halloffame as hf
 on p.playerid = hf.playerid
-where p.throws = 'R' and ballots >= 75 ) as right_people_fame
+where p.throws = 'R' and ballots >= 75 ) as right_people_fame,
+(select count(p.playerid) from people as p inner join halloffame as hf
+ on p.playerid = hf.playerid where ballots > 75) as Players_fame
 from people ) as subquery
 
 
